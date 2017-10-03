@@ -2,13 +2,10 @@ import processing.sound.*;
 SoundFile file;
 Amplitude rms;
 
-// scaling factor
 float scale=5;
 
-// smooth factor
 float smooth_factor=0.30;
 
-// smoothing
 float sum;
 
 void setup() {
@@ -18,23 +15,11 @@ void setup() {
   file = new SoundFile(this, "AUT? MM.mp3");
   file.play();
   file.loop();
-  file.amp(0.5);
+  file.amp(0.6);
   
   rms = new Amplitude(this);
     rms.input(file);
 }
-
-
-//fill circles
-void fillArea() {
-  float x = random(10, 100);
-  int opaqvalue = int(x);
-
-  float y = random(250,250);
-  int colourvalue = int(y);
-  
-  fill(250, colourvalue, 250, opaqvalue);
-} 
 
 void draw() {
     background(38,38,34);
