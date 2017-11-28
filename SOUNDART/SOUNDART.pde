@@ -2,7 +2,7 @@ import processing.sound.*;
 SoundFile file;
 Amplitude rms;
 
-float scale=5;
+float scale=2;
 
 float smooth_factor=0.30;
 
